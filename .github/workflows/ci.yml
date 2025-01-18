@@ -1,0 +1,26 @@
+---
+name: CI
+
+# yamllint disable-line rule:truthy
+on:
+  pull_request:
+    branches:
+      - "*"
+  push:
+    branches:
+      - "main"
+
+concurrency:
+  group: build-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env: {}
+
+jobs:
+  dummy:
+    name: "Do nothing (change me)"
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "hooray!"
+          exit 0

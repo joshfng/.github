@@ -1,0 +1,9 @@
+*Dockerfile
+.dockerignore
+.git
+.vagrant
+contrib
+build
+docs
+tests
+vendor

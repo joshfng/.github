@@ -1,0 +1,7 @@
+.DS_Store
+.idea/
+.vscode/
+.vagrant
+build/
+tmp
+node_modules
